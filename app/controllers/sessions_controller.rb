@@ -4,13 +4,11 @@ class SessionsController < ApplicationController
 
   def create
     user = User.find_by(name: params[:name])
-    if user && user.authenticate(params[:name])
+    if user && user.name == params[:name]
       session[:user_id] = user.id
-      redirect_to (session[:intended_url] || user),
-                  notice: "Welcome back, #{user.name}!"
-      session[:intended_url] = nil
+      redirect_to user, flash: { notice: "Welcome back, #{user.name}!" }
     else
-      flash.now[:alert] = 'Invalid email/password combination!'
+      flash.now[:alert] = 'No user found, Please enter valid name'
       render :new
     end
   end
