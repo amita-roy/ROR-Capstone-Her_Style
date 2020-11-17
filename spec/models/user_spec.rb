@@ -12,4 +12,15 @@ RSpec.describe User, type: :model do
       expect(user.name.length).to be >= 3
     end
   end
+
+  context 'associations' do
+    it 'should have many votes' do
+      t = User.reflect_on_association(:votes)
+      expect(t.macro).to eq(:has_many)
+    end
+    it 'should have many articles' do
+      t = User.reflect_on_association(:articles)
+      expect(t.macro).to eq(:has_many)
+    end
+  end
 end
