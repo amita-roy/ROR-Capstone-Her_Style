@@ -136,8 +136,6 @@ GEM
     puma (5.0.4-java)
       nio4r (~> 2.0)
     rack (2.2.3)
-    rack-mini-profiler (2.2.0)
-      rack (>= 1.2.0)
     rack-proxy (0.6.5)
       rack
     rack-test (1.1.0)
@@ -277,7 +275,6 @@ DEPENDENCIES
   listen (~> 3.2)
   pg (~> 1.1)
   puma (~> 5.0)
-  rack-mini-profiler (~> 2.0)
   rails (~> 6.1.0.rc1)
   rspec-rails (~> 4.0, >= 4.0.1)
   rubocop (~> 1.3)
