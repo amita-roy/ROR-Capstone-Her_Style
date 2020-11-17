@@ -4,5 +4,5 @@ class Article < ApplicationRecord
   has_many :categorizations, dependent: :destroy
   has_many :categories, through: :categorizations
 
-  # validates :title, :text, :createdat, presence: true
+  validates :title, :text, :createdat, presence: true
 end
