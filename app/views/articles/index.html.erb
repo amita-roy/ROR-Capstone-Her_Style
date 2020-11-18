@@ -1,4 +1,26 @@
+<div class="home d-flex flex-column">
+<section class="main-top">
+    <article class="h-100">
+        <h4>Most voted article</h4>
+    </article>
+</section>
+<section class="main-categories d-flex">
 
+    <% @categories.each do |cat| %>
+        <article class="">
+            <h5 class="mr-2"><%= link_to (cat.name).capitalize, filtered_articles_path(:"#{cat.name}") %></h5>
+        </article>
+    <% end %>
+   
+    
+</section>
+</div>
+
+
+
+
+
+<% if false %>
 <h1>All Articles</h1>
 
 
@@ -14,4 +36,6 @@
 
 <% if current_user %>
     <%= link_to "New Article", new_article_path %>
+<% end %>
+
 <% end %>

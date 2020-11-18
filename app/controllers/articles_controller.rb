@@ -4,6 +4,7 @@ class ArticlesController < ApplicationController
 
   def index
     @articles = Article.send(articles_filter)
+    @categories = Category.all
   end
 
   def new
