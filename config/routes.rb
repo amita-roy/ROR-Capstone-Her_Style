@@ -1,11 +1,12 @@
 Rails.application.routes.draw do
   root 'articles#index'
+  get 'articles/category/:filter' => 'articles#index', as: :filtered_articles
   resources :articles do
     resources :votes
   end
   resources :categories
 
-  resource :session, only: [:new, :create, :destroy]
+  resource :session, only: %i[new create destroy]
   get 'signin' => 'sessions#new'
 
   resources :users
