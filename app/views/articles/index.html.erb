@@ -4,7 +4,8 @@
 
 <% @articles.each do |article| %>
     <div>
-        <h3><%= article.title %></h3>
+        <h3><%= link_to article.title, article %></h3>
+        <%= main_image(article) %>
         <p><%= article.text %></p>
         <small>Created at: <%= article.createdat %></small>
     
