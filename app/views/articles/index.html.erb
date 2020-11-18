@@ -1,0 +1,24 @@
+
+<% if current_user %>
+    <%= link_to current_user.name, current_user %>
+    <%= link_to "Sign Out", session_path, method: :delete %>
+<% else %>
+<%= link_to "Sign In", signin_path %>
+<%= link_to "Sign up", signup_path %>
+<% end %>
+
+<h1>All Articles</h1>
+
+
+<% @articles.each do |article| %>
+    <div>
+        <h3><%= article.title %></h3>
+        <p><%= article.text %></p>
+        <small>Created at: <%= article.createdat %></small>
+    
+    </div>
+<% end %>
+
+<% if current_user %>
+    <%= link_to "New Article", new_article_path %>
+<% end %>

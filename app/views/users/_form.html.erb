@@ -1,0 +1,22 @@
+<%= form_with(model: user, local: true) do |f| %>
+
+<%= render "shared/errors", object: user %>    
+
+
+<%= f.label :name %>
+<%= f.text_field :name %><br>
+
+<%= f.label :email %>
+<%= f.email_field :email %><br>
+
+<%= f.label :password %>
+<%= f.password_field :password %><br>
+
+
+<% if user.new_record? %>
+    <%= f.submit "Create Account" %>
+<% else %>
+    <%= f.submit "Update Account" %>
+<% end %>
+
+<% end %>

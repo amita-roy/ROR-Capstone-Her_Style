@@ -1,0 +1,20 @@
+<%= form_with(model: article, local: true) do |f| %>
+
+    <%= render "shared/errors", object: article %>    
+
+
+    <%= f.label :title %>
+    <%= f.text_field :title %><br>
+
+    <%= f.label :text %>
+    <%= f.text_area :text %><br>
+
+    <%= f.label :created_at %>
+    <%= f.date_field :createdat %><br>
+
+
+    <%= f.submit "Create Article" %>
+
+
+
+<% end %>
