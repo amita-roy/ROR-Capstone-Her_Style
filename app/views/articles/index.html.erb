@@ -1,12 +1,4 @@
 
-<% if current_user %>
-    <%= link_to current_user.name, current_user %>
-    <%= link_to "Sign Out", session_path, method: :delete %>
-<% else %>
-<%= link_to "Sign In", signin_path %>
-<%= link_to "Sign up", signup_path %>
-<% end %>
-
 <h1>All Articles</h1>
 
 
