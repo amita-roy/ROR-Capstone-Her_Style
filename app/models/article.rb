@@ -4,7 +4,7 @@ class Article < ApplicationRecord
   has_many :categorizations, dependent: :destroy
   has_many :categories, through: :categorizations
 
-  has_one_attached :main_image
+  has_one_attached :image
 
   validates :title, :text, :createdat, presence: true
 end
