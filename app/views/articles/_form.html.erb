@@ -15,8 +15,14 @@
     <%= f.label :image %>
     <%= f.file_field :image %><br>
 
-    <%= f.submit "Create Article" %>
+    
+
+    <%= f.label :categories %>
+    <%= f.collection_check_boxes(:category_ids, Category.all, :id, :name)%><br>
 
     <%= f.collection_select(:category_id, Category.all, :id, :name, {}, {multiple: true}) %>
 
+    <%= f.submit "Create Article" %>
+
 <% end %>
+<%= javascript_include_tag "article" %>
