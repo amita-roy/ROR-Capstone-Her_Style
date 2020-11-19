@@ -8,9 +8,9 @@ class Article < ApplicationRecord
 
   validates :title, :text, :createdat, presence: true
 
-  scope :fashion, -> { where(:category => 'fashion')}
-  scope :cosmetics, -> { where(:category => 'cosmetics')}
-  scope :business, -> { where(:category => 'business ')}
-  scope :worklife, -> { where(:category => 'worklife')}
+  scope :fashion, -> { where(category: 'fashion') }
+  scope :cosmetics, -> { where(category: 'cosmetics') }
+  scope :business, -> { where(category: 'business ') }
+  scope :worklife, -> { where(category: 'worklife') }
   # Ex:- scope :active, -> {where(:active => true)}
 end
