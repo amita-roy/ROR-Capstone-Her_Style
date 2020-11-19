@@ -17,6 +17,6 @@
 
     <%= f.submit "Create Article" %>
 
-
+    <%= f.collection_select(:category_id, Category.all, :id, :name, {}, {multiple: true}) %>
 
 <% end %>
