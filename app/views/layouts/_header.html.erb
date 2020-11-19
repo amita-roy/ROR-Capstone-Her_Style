@@ -8,9 +8,9 @@
                 <li class="nav-item active px-lg-3 mx-lg-3">
                     <%= link_to 'Home', root_path, class: "nav-link" %>
                 </li>
-                <% Category.all.each do |cat|%>
+                <% all_routes.each do |route|%>
                 <li class="nav-item active px-lg-3 mx-lg-3">
-                    <%= link_to (cat.name).capitalize, category_path(cat.id), class: "nav-link" %>
+                    <%= route %>
                 </li>
                 <%end%>
                 

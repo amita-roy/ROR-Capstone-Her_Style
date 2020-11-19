@@ -8,4 +8,13 @@ module ApplicationHelper
 
     doc.to_html.html_safe
   end
+
+  def all_routes
+    routes = []
+    Category.all.each do |cat|
+      routes << (link_to (cat.name).capitalize, category_path(cat.id), class: "nav-link")
+    end
+
+    routes
+  end
 end
