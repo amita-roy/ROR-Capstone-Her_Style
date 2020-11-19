@@ -3,8 +3,8 @@ class ArticlesController < ApplicationController
   before_action :set_article, only: %i[show edit update destroy]
 
   def index
-    @articles = Article.send(articles_filter)
-    @categories = Category.all
+    @articles = Article.all
+   
   end
 
   def new
@@ -27,13 +27,7 @@ class ArticlesController < ApplicationController
 
   private
 
-  def articles_filter
-    if params[:filter].in? %w[fashion cosmetics worklife business]
-      params[:filter]
-    else
-      :all
-    end
-  end
+  
 
   def set_article
     @article = Article.find(params[:id])
