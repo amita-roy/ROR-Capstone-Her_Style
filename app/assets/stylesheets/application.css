@@ -12,5 +12,5 @@
  *
  *= require_tree .
  *= require_self
+ *= require bootstrap-multiselect
  */
-@import 'bootstrap-multiselect';
