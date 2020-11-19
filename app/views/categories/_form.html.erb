@@ -1,0 +1,12 @@
+<%= form_with(model: category, local: true) do |form| %>
+
+    <%= render "shared/errors", object: category %>
+
+    <%= form.label :name %>
+    <%= form.text_field :name, autofocus: true %>
+
+    <%= form.label :priority %>    
+    <%= form.select(:priority, [['High'], ['Medium'], ['Low']]) %>
+
+    <%= form.submit %>
+<% end %>
