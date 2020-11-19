@@ -1,0 +1,34 @@
+<div class="navbar navbar-expand-lg navbar-light bg-light px-2 d-flex align-items-center">
+    
+    <div class="d-flex justify-content-between align-items-center w-100 flex-lg-row" >
+        <%= link_to "herSTYLE", root_path, class: "navbar-brand" %>
+    
+        <div class="flex-2 d-flex justify-content-center align-items-center">
+            <ul class="navbar-nav">
+                <li class="nav-item active px-lg-2">
+                    <%= link_to "Privacy Policy", root_path, class: "nav-link" %>
+                </li>
+                <li class="nav-item active px-lg-2">
+                    <%= link_to "Terms & Conditions", root_path, class: "nav-link" %>
+                </li>
+                <li class="nav-item active px-lg-2">
+                    <p class="mb-0 nav-link">Copyright 2020. All right reserved.</p>
+                </li>
+                
+            </ul>
+        </div>
+
+        <div class="d-flex justify-content-end align-items-center flex-0">
+            <p class="mb-0">Contact with us: </p>
+            <div class="ml-3">
+                <%= my_icon("twitter", class: "social-icons") %>
+                <%= my_icon("instagram", class: "social-icons") %>
+                <%= my_icon("facebook", class: "social-icons") %>
+            </div>
+        </div>
+       
+        
+    </div>
+
+
+</div>

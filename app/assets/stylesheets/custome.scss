@@ -1,0 +1,17 @@
+.main {
+  min-height: calc(100vh - 130px);
+}
+
+.social-icons {
+  width: 32px;
+}
+
+.main-top {
+  max-height: 570px;
+}
+
+.main-categories {
+  max-height: 300px;
+}
+
+@import 'bootstrap';

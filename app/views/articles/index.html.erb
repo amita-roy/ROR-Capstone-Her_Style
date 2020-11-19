@@ -1,18 +1,37 @@
+<div class="home d-flex flex-column">
+<section class="main-top">
+    <article class="h-100">
+        <h4>Most voted article</h4>
+    </article>
+</section>
+<section class="main-categories d-flex">
+
+    <% @categories.each do |cat| %>
+        <article class="">
+            <h5 class="mr-2"><%= link_to (cat.name).capitalize, filtered_articles_path(:"#{cat.name}") %></h5>
+        </article>
+    <% end %>
+   
+    
+</section>
+</div>
 
 <% if current_user %>
-    <%= link_to current_user.name, current_user %>
-    <%= link_to "Sign Out", session_path, method: :delete %>
-<% else %>
-<%= link_to "Sign In", signin_path %>
-<%= link_to "Sign up", signup_path %>
+<%= link_to 'New Article', new_article_path%>
 <% end %>
 
+
+
+
+
+<% if false %>
 <h1>All Articles</h1>
 
 
 <% @articles.each do |article| %>
     <div>
-        <h3><%= article.title %></h3>
+        <h3><%= link_to article.title, article %></h3>
+        <%= image(article) %>
         <p><%= article.text %></p>
         <small>Created at: <%= article.createdat %></small>
     
@@ -21,4 +40,6 @@
 
 <% if current_user %>
     <%= link_to "New Article", new_article_path %>
+<% end %>
+
 <% end %>

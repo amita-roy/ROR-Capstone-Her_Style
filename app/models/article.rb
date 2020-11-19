@@ -4,5 +4,13 @@ class Article < ApplicationRecord
   has_many :categorizations, dependent: :destroy
   has_many :categories, through: :categorizations
 
+  has_one_attached :image
+
   validates :title, :text, :createdat, presence: true
+
+  scope :fashion, -> { where(category: 'fashion') }
+  scope :cosmetics, -> { where(category: 'cosmetics') }
+  scope :business, -> { where(category: 'business ') }
+  scope :worklife, -> { where(category: 'worklife') }
+  # Ex:- scope :active, -> {where(:active => true)}
 end
