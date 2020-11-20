@@ -3,7 +3,12 @@ class Articles::VotesController < ApplicationController
   before_action :set_article
 
   def create
-    @article.votes.where(user: current_user).first_or_create
+    @article.votes.where(user_id: current_user.id).first_or_create
+    redirect_to @article
+  end
+
+  def destroy
+    @article.votes.where(user_id: current_user.id).destroy_all
     redirect_to @article
   end
 
