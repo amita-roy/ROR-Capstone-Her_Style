@@ -1,0 +1,5 @@
+<h2>Update Article Details</h2>
+
+<% if @article.author_id == current_user.id %>
+    <%= render "articles/form", article: @article %>
+<% end %>

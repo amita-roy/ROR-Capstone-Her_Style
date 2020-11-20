@@ -1,6 +1,13 @@
-<%= @article.title %>
+<h3><%= @article.title %></h3>
+<p><%= @article.text %></p>
 <%= image(@article) %>
 
 <div id="votes">
-    <%= render partial: "votes" %>
+    <%= render partial: "votes" %> <span><%= @article.votes.length %></span><br>
 </div>
+
+<% if @article.author_id == current_user.id %>
+    <%= link_to "Edit Details", edit_article_path(@article) %>
+    <%= link_to "Delete Article", article_path(@article), method: :delete, data: { confirm: "Are you sure want to delete this article" } %>
+
+<% end %>

@@ -16,8 +16,14 @@
     <%= f.file_field :image %><br>
 
     <%= f.label :categories %>
-    <%= f.collection_check_boxes(:category_ids, Category.all, :id, :name)%><br>
+    <%= f.collection_check_boxes(:category_ids, Category.all, :id, :name) %><br>
+
+    <% if article.new_record? %>
+        <%= f.submit "Create Article" %>
+    <% else %>
+        <%= f.submit "Update Article" %>
+    <% end %>
     
-    <%= f.submit "Create Article" %>
+    
 
 <% end %>

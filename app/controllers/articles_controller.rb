@@ -11,7 +11,23 @@ class ArticlesController < ApplicationController
   end
 
   def show
-    @categories = @article.categories
+    # @categories = @article.categories
+  end
+
+  def edit
+  end
+
+  def update
+    if @article.update(article_params)
+      redirect_to @article, notice: 'Article successfully updated!'
+    else
+      render :edit
+    end
+  end
+
+  def destroy
+    @article.destroy
+    redirect_to root_path
   end
 
   def create
