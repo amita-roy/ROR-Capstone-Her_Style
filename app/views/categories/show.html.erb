@@ -1,1 +1,8 @@
-<h3><% (@category.name).capitalize%></h3>
+<h3><%= (@category.name).capitalize %></h3>
+
+<ul>
+<% cat_articles(@category).each do |article| %>
+    <li><%= article.title %></li>
+<% end %>
+
+</ul>
