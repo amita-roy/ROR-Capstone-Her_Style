@@ -11,10 +11,10 @@
 
 <section class="main-categories d-flex">
 
-    <% @categories.each do |cat| %>
-        <div class="category-box">
-            <h5 class="mr-2"><%= link_to (cat.name).capitalize, category_path(cat) %></h5>
-            <%= most_recent_article(cat) && most_recent_article(cat).title %>
+    <% @categories.each do |category| %>
+        <div class="category-box" >
+            <h5 class="mr-2"><%= link_to (category.name).capitalize, category_path(category) %></h5>
+            <%= category.most_recent_article && category.most_recent_article.title %>
         </div>
     <% end %>
    

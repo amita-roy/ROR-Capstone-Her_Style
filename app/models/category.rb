@@ -8,6 +8,11 @@ class Category < ApplicationRecord
 
   scope :category_order, -> { Category.order(priority: :asc) }
 
+  def most_recent_article
+    articles = self.articles.order(created_at: :desc)
+    articles[0]
+  end
+
   def to_param
     slug
   end
