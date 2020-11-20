@@ -1,1 +1,1 @@
-<%= link_to "Vote", article_vote_path(@article), methode: :post %>
+<%= vote?(current_user, @article) %>

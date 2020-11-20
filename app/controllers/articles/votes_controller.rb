@@ -3,7 +3,7 @@ class Articles::VotesController < ApplicationController
   before_action :set_article
 
   def create
-    @article.votes.create!(user: current_user)
+    @article.votes.where(user: current_user).first_or_create
     redirect_to @article
   end
 
