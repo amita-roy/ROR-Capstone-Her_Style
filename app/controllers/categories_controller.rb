@@ -19,6 +19,7 @@ class CategoriesController < ApplicationController
 
   def show
     @category = Category.find_by!(slug: params[:id])
+    @articles = @category.articles_order
   end
 
   private

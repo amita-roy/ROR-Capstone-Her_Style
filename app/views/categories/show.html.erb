@@ -1,7 +1,7 @@
 <h3><%= (@category.name).capitalize %></h3>
 
 <ul>
-<% cat_articles(@category).each do |article| %>
+<% @articles.each do |article| %>
     <li><%= link_to article.title, article %></li>
 <% end %>
 
