@@ -3,7 +3,6 @@ class Category < ApplicationRecord
   has_many :categorizations, dependent: :destroy
   has_many :articles, through: :categorizations, dependent: :destroy
 
-
   def to_param
     slug
   end
@@ -13,5 +12,4 @@ class Category < ApplicationRecord
   def set_slug
     self.slug = name.parameterize
   end
-
 end

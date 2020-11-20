@@ -12,7 +12,7 @@ module ApplicationHelper
   def all_routes
     routes = []
     Category.all.each do |cat|
-      routes << (link_to (cat.name).capitalize, category_path(cat.slug), class: "nav-link")
+      routes << (link_to cat.name.capitalize, category_path(cat.slug), class: 'nav-link')
     end
 
     routes

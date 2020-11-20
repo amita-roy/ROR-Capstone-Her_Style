@@ -7,5 +7,4 @@ class Article < ApplicationRecord
   has_one_attached :image
 
   validates :title, :text, :createdat, presence: true
-
 end
