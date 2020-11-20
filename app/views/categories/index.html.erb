@@ -1,0 +1,24 @@
+<div class="home d-flex flex-column">
+<section class="main-top">
+    <article class="h-100">
+        <h4>Most voted article</h4>
+    </article>
+</section>
+
+
+<section class="main-categories d-flex">
+
+    <% @categories.each do |cat| %>
+        <div class="">
+            <h5 class="mr-2"><%= link_to (cat.name).capitalize, category_path(cat) %></h5>
+        </div>
+    <% end %>
+   
+    
+</section>
+</div>
+
+<% if current_user %>
+<%= link_to 'New Article', new_article_path%>
+<% end %>
+

@@ -1,6 +1,5 @@
 Rails.application.routes.draw do
-  root 'articles#index'
-  get 'articles/category/:filter' => 'articles#index', as: :filtered_articles
+  root 'categories#index'
   resources :articles do
     resources :votes
   end
