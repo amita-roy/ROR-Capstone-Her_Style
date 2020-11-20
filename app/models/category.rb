@@ -3,6 +3,8 @@ class Category < ApplicationRecord
   has_many :categorizations, dependent: :destroy
   has_many :articles, through: :categorizations, dependent: :destroy
 
+  # Ex:- scope :active, -> {where(:active => true)}
+
   def to_param
     slug
   end

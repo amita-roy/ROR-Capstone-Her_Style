@@ -9,7 +9,7 @@ class Article < ApplicationRecord
   validates :title, :text, :createdat, presence: true
 
   def self.most_voted_article
-    article = Article.includes(:votes).sort { |a, b| a.votes.size <=> b.votes.size }.reverse
-    article[0]
+    articles = Article.includes(:votes).sort { |a, b| b.votes.size <=> a.votes.size }
+    articles.first
   end
 end
