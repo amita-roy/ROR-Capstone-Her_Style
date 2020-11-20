@@ -1,7 +1,7 @@
 <div class="home d-flex flex-column">
 <section class="main-top">
     <article class="h-100">
-        <h4>Most voted article</h4>
+        <h4><%= @most_voted_article.title %></h4>
     </article>
 </section>
 
@@ -19,6 +19,6 @@
 </div>
 
 <% if current_user %>
-<%= link_to 'New Article', new_article_path%>
+<%= link_to "New Article", new_article_path %>
 <% end %>
 

@@ -1,6 +1,7 @@
 class CategoriesController < ApplicationController
   def index
     @categories = Category.all
+    @most_voted_article = Article.most_voted_article
   end
 
   def new
