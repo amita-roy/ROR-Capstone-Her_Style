@@ -4,7 +4,6 @@ class Category < ApplicationRecord
   has_many :articles, through: :categorizations, dependent: :destroy
 
   scope :category_order, -> { Category.order(priority: :asc) }
-  # Ex:- scope :active, -> {where(:active => true)}
 
   def to_param
     slug
