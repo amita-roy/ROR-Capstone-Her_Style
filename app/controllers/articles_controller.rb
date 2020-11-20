@@ -12,7 +12,6 @@ class ArticlesController < ApplicationController
 
   def show
     @categories = @article.categories
-    @vote = current_user.votes.find_by(article_id: @article.id) if current_user
   end
 
   def create
