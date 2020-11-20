@@ -1,4 +1,6 @@
 class CategoriesController < ApplicationController
+  before_action :require_signin, except: %i[index show]
+
   def index
     @categories = Category.category_order
     @most_voted_article = Article.most_voted_article
