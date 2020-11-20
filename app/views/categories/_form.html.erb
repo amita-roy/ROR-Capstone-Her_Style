@@ -6,7 +6,7 @@
     <%= form.text_field :name, autofocus: true %>
 
     <%= form.label :priority %>    
-    <%= form.select(:priority, [['High'], ['Medium'], ['Low']]) %>
+    <%= form.select(:priority, [["High", 1], ["Medium", 2], ["Low", 3]]) %>
 
     <%= form.submit %>
 <% end %>

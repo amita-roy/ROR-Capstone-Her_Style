@@ -1,7 +1,9 @@
 <div class="home d-flex flex-column">
 <section class="main-top">
     <article class="h-100">
+        <% if @most_voted_article %>
         <h4><%= @most_voted_article.title %></h4>
+        <% end %>
     </article>
 </section>
 
