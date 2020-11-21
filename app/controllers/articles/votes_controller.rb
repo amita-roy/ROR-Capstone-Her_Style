@@ -4,12 +4,12 @@ class Articles::VotesController < ApplicationController
 
   def create
     @article.votes.where(user_id: current_user.id).first_or_create
-    redirect_to @article
+    redirect_to request.referrer
   end
 
   def destroy
     @article.votes.where(user_id: current_user.id).destroy_all
-    redirect_to @article
+    redirect_to request.referrer
   end
 
   private
