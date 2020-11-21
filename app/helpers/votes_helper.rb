@@ -1,3 +1,2 @@
 module VotesHelper
-  private
 end
