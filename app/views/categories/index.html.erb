@@ -1,27 +1,37 @@
-<div class="home d-flex flex-column">
-<section class="main-top">
-    <article class="h-100">
-        <% if @most_voted_article %>
-        <h4><%= @most_voted_article.title %></h4>
-        <% end %>
-    </article>
-</section>
-
-
-<section class="main-categories d-flex">
-
-    <% @categories.each do |category| %>
-        <div class="category-box" style="background-image: url(<%= category_background(category) %>)">
-            <h5 class="mr-2"><%= link_to (category.name).capitalize, category_path(category) %></h5>
-            <%= category.most_recent_article && category.most_recent_article.title %>
+<div class="home">
+    <div class="top-row">
+        <div class="col-8 main-top"   style="background-image: url(<%= most_voted_article_image(@most_voted_article) %>)">
+         
+            <article>
+                <% if @most_voted_article %>
+                <h4><%= @most_voted_article.title %></h4>
+                <% end %>
+            </article>
+       
         </div>
-    <% end %>
-   
+
+        <div class="col-4 top-right">
+        </div>
+       
+       
+    </div>
+
+    <div class="category-list mt-1">
+
+
+        <% @categories.each do |category| %>
+           
+                <div class="category-box" style="background-image: url(<%= category_background(category) %>)">
+                    <h5 class="mr-2"><%= link_to (category.name).capitalize, category_path(category) %></h5>
+                    <%= category.most_recent_article && category.most_recent_article.title %>
+                </div>
+        <% end %>
     
-</section>
+        
+   
+    </div>
+       
+    </div>
 </div>
 
-<% if current_user %>
-<%= link_to "New Article", new_article_path %>
-<% end %>
 
