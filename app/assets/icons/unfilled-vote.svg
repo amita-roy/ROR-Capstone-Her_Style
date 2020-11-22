@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="719" height="719" viewBox="0 0 719 719">
+  <g id="unfilled-vote" transform="translate(-523 -282)">
+    <g id="Ellipse_1" data-name="Ellipse 1" transform="translate(523 282)" fill="#fff" stroke="#4e443e" stroke-width="58">
+      <circle cx="359.5" cy="359.5" r="359.5" stroke="none"/>
+      <circle cx="359.5" cy="359.5" r="330.5" fill="none"/>
+    </g>
+    <path id="Icon_awesome-arrow-up" data-name="Icon awesome-arrow-up" d="M30.355,266.032,7.618,243.294a24.48,24.48,0,0,1,0-34.721l199-199.106a24.48,24.48,0,0,1,34.721,0l199,199a24.48,24.48,0,0,1,0,34.721l-22.737,22.737a24.609,24.609,0,0,1-35.13-.41L265,142.2V436.563a24.522,24.522,0,0,1-24.581,24.581H207.646a24.522,24.522,0,0,1-24.581-24.581V142.2L65.486,265.622a24.432,24.432,0,0,1-35.13.41Z" transform="translate(658.603 409.754)" fill="#4e443e"/>
+  </g>
+</svg>
