@@ -1,7 +1,7 @@
 @import '_shared';
 
 .main {
-  min-height: calc(100vh - 130px);
+  min-height: calc(100vh - 135px);
 }
 
 .vote-icons {
@@ -18,8 +18,4 @@ svg.vote-icons {
 
 .main-categories {
   max-height: 300px;
-}
-
-h4 {
-  font-family: 'Lato';
 }

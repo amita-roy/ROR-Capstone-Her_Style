@@ -13,7 +13,7 @@
   }
 
   li a {
-    font-family: 'Chivo', sans-serif;
+    font-family: $chivo-font, sans-serif;
     text-transform: uppercase;
     font-size: 16px;
     text-decoration: none;
@@ -38,7 +38,7 @@
 
     .dropdown-item {
       color: $dark-gray;
-      font-family: 'Lato', sans-serif;
+      font-family: $lato-font, sans-serif;
       font-size: 14px;
       text-transform: none;
     }

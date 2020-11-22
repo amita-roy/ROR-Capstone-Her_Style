@@ -1,36 +1,18 @@
 <div class="home">
-    <div class="top-row">
-        <div class="col-8 main-top"   style="background-image: url(<%= most_voted_article_image(@most_voted_article) %>)">
-         
-            <article>
-                <% if @most_voted_article %>
-                <h4><%= @most_voted_article.title %></h4>
-                <% end %>
-            </article>
-       
-        </div>
-
-        <div class="col-4 top-right">
-        </div>
-       
-       
-    </div>
-
-    <div class="category-list mt-1">
-
-
-        <% @categories.each do |category| %>
-           
-                <div class="category-box" style="background-image: url(<%= category_background(category) %>)">
-                    <h5 class="mr-2"><%= link_to (category.name).capitalize, category_path(category) %></h5>
-                    <%= category.most_recent_article && category.most_recent_article.title %>
-                </div>
-        <% end %>
     
-        
-   
+    <div class="top-article"   style="background-image: linear-gradient(0deg, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.2) 15%, rgba(0,0,0,0.2) 85%, rgba(0,0,0,0.5) 100%), url(<%= most_voted_article_image(@most_voted_article) %>)">
+        <% if @most_voted_article %>
+        <h4><%= @most_voted_article.title %></h4>
+        <% end %>
     </div>
-       
+
+    <div class="category-list">
+        <% @categories.each do |category| %>
+            <div class="category-box" style="background-image: linear-gradient(0deg, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.2) 15%, rgba(0,0,0,0.2) 85%, rgba(0,0,0,0.5) 100%), url(<%= category_background(category) %>)">
+                <h5 class="mr-2"><%= link_to (category.name).capitalize, category_path(category), class: "category-name" %></h5>
+                <p class="title"><%= category.most_recent_article&.title %></p>
+            </div>  
+        <% end %>
     </div>
 </div>
 
