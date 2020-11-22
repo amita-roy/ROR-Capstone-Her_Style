@@ -7,12 +7,38 @@ $light-gray: #b5b2af;
 $white-text: white;
 $black-color: #181e24;
 
+@font-face {
+  font-family: 'Carto Gothic';
+  src: font-url('carto-gothic/CartoGothicStd-Book.otf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Lato';
+  src: font-url('lato/Lato-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Chivo';
+  src: font-url('chivo/Chivo-Regular.otf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 .main {
   min-height: calc(100vh - 130px);
 }
 
-.social-icons {
+.social-icons,
+.vote-icons {
   width: 32px;
+}
+
+svg.vote-icons {
+  height: 32px;
 }
 
 .main-top {
@@ -24,3 +50,7 @@ $black-color: #181e24;
 }
 
 @import 'bootstrap';
+
+h4 {
+  font-family: 'Lato';
+}

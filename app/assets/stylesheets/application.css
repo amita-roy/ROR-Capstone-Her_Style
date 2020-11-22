@@ -14,3 +14,8 @@
  *= require_self
  *= require bootstrap-multiselect
  */
+
+@font-face {
+  font-family: 'Chivo Regular';
+  src: url(/assets/fonts/chivo/Chivo-Regular.otf) format('opentype');
+}
