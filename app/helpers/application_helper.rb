@@ -9,10 +9,18 @@ module ApplicationHelper
     doc.to_html.html_safe
   end
 
+  def nav_link_to(text, url)
+    if current_page?(url)
+      link_to(text, url, class: 'active')
+    else
+      link_to(text, url)
+    end
+  end
+
   def all_routes
     routes = []
     Category.all.each do |cat|
-      routes << (link_to cat.name.capitalize, category_path(cat.slug), class: 'nav-link')
+      routes << (nav_link_to cat.name.capitalize, category_path(cat.slug))
     end
 
     routes
