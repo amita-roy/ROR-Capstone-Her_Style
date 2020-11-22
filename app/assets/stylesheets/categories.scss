@@ -7,6 +7,15 @@
 .top-article {
   min-height: 600px;
   background-size: cover;
+  padding: 20px;
+  color: $white-text;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+
+  .title {
+    color: $secondary-color;
+  }
 }
 
 .category-list {
