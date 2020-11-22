@@ -5,3 +5,7 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+Category.create([{ name: 'Fashion', priority: '2' }, { name: 'Business', priority: '1' }, { name: 'Worklife', priority: '1' }, { name: 'Cosmetics', priority: '3' }])
+
+puts 'Success: Default categories data loaded'

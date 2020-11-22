@@ -13,7 +13,7 @@
   }
 
   li a {
-    font-family: 'Chivo';
+    font-family: 'Chivo', sans-serif;
     text-transform: uppercase;
     font-size: 16px;
     text-decoration: none;
@@ -30,5 +30,22 @@
 
   .active {
     color: $secondary-color;
+  }
+
+  .dropdown-menu {
+    transition: transform 1s ease-in;
+    transform: translate3d(-139px, 50px, 0) !important;
+
+    .dropdown-item {
+      color: $dark-gray;
+      font-family: 'Lato', sans-serif;
+      font-size: 14px;
+      text-transform: none;
+    }
+  }
+
+  .dropdown-item:hover {
+    background-color: $secondary-color;
+    color: white;
   }
 }
