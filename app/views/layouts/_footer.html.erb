@@ -35,30 +35,30 @@
 </div>
 <% end %>
 
-<footer class="d-flex justify-content-between px-3 align-items-center py-1 footer">
+<footer class="d-flex justify-content-between px-3 align-items-center py-2 footer">
     <div class="logo flex-1 w-25">
         <%= link_to "herSTYLE", root_path, class: "navbar-brand" %>
     </div>
     <div class="category-links flex-2 w-50">
         <ul class="w-100 d-flex align-items-center justify-content-center mb-0">
-            <li class="nav-item active px-lg-1">
-                    <%= link_to "Privacy Policy", root_path, class: "nav-link" %>
+            <li class="">
+                    <%= link_to "Privacy Policy", root_path %>
                 </li>
-                <li class="nav-item active px-lg-1">
-                    <%= link_to "Terms & Conditions", root_path, class: "nav-link" %>
+                <li class="pl-2">
+                    <%= link_to "Terms & Conditions", root_path %>
                 </li>
-                <li class="nav-item active px-lg-1">
-                    <p class="mb-0 nav-link">Copyright 2020. All right reserved.</p>
+                <li class="pl-3">
+                    <p class="mb-0 copyright-text">Copyright 2020. All right reserved.</p>
                 </li>
                 
         </ul>
     </div>
     <div class="nav-right-links flex-1 w-25 d-flex justify-content-end align-items-center ">
-        <p class="mb-0">Contact with us: </p>
+        <p class="mb-0 contact-text">Connect with us: </p>
             <div class="ml-3">
-                <%= my_icon("twitter", class: "social-icons") %>
-                <%= my_icon("instagram", class: "social-icons") %>
-                <%= my_icon("facebook", class: "social-icons") %>
+                <%= my_icon("twitter-2", class: "social-icons mr-2") %>
+                <%= my_icon("instagram-2", class: "social-icons mr-2") %>
+                <%= my_icon("facebook-2", class: "social-icons") %>
             </div>
     </div>
 </footer>

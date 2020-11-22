@@ -1,1 +1,34 @@
 @import '_shared';
+
+.header {
+  background-color: white;
+  box-shadow: 3px 3px 5px 4px rgba($color: #dadada, $alpha: 1);
+
+  .navbar-brand {
+    color: $secondary-color;
+  }
+
+  ul {
+    list-style: none;
+  }
+
+  li a {
+    font-family: 'Chivo';
+    text-transform: uppercase;
+    font-size: 16px;
+    text-decoration: none;
+    color: $dark-gray;
+    transition: all 0.5s ease-in-out;
+  }
+
+  li:focus,
+  li:hover {
+    a {
+      color: $secondary-color;
+    }
+  }
+
+  .active {
+    color: $secondary-color;
+  }
+}
