@@ -20,7 +20,7 @@ class UsersController < ApplicationController
 
     if @user.save
       session[:user_id] = @user.id
-      redirect_to @user, notice: 'Thanks for successfully signed up!'
+      redirect_to root_path, notice: 'Thanks for successfully signed up!'
     else
       render :new
     end

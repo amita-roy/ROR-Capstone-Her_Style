@@ -22,7 +22,7 @@
                     <%= link_to current_user.name, current_user %>
                 </li>
                 <li class="py-1 mx-3">
-                     <%= link_to "Write an Article", new_article_path %>
+                     <%= nav_link_to "Write an Article", new_article_path %>
                 </li>
                 <li class="py-1">
                      <%= link_to "Sign Out", session_path, method: :delete %>
@@ -32,8 +32,11 @@
                 
                 
             <% else %>
-                <li class="py-1"><%= nav_link_to "Sign In |", signin_path %></li>
-                <li class=" pl-1 py-1"><%= nav_link_to "Sign up", signup_path %></li>
+                <li class="py-1 mr-3">
+                     <%= link_to "Write an Article", new_article_path %>
+                </li>
+                <li class="py-1"><%= nav_link_to "Login |", signin_path %></li>
+                <li class=" pl-1 py-1"><%= nav_link_to "Register", signup_path %></li>
             <% end %>
             </ul>
     </div>
