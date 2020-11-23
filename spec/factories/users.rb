@@ -1,13 +1,17 @@
 FactoryBot.define do
-  factory :user, class: 'User' do
-    name { 'John' }
-    email { 'john@example.com' }
+  sequence :email do |n|
+    "test#{n}@example.com"
+  end
+
+  factory :user do
+    name { 'Dodo' }
+    email { generate :email }
     password { '123456' }
   end
 
-  factory :random_user, class: 'User' do
-    name { Faker::Name.name }
-    email { Faker::Internet.email }
+  factory :second_user, class: 'User' do
+    name { 'Pete' }
+    email { generate :email }
     password { '123456' }
   end
 end
