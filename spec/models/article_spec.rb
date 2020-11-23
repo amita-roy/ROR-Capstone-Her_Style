@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.describe Article, type: :model do
   context 'associations' do
     it 'should belongs to a user' do
-      t = Article.reflect_on_association(:user)
+      t = Article.reflect_on_association(:author)
       expect(t.macro).to eq(:belongs_to)
     end
 

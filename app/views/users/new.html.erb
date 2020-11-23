@@ -1,7 +1,12 @@
-<h1>Sign Up</h1>
+<div class="static-background">
 
-<p>
-  Already have an account? <%= link_to "Sign in!", signin_path %>
-</p>
+  <div class="form-container">
+  <h1>Sign Up</h1>
 
-<%= render "users/form", user: @user %>
+  <p class="account">
+    Already have an account? <%= link_to "Sign in!", signin_path, class: "ml-2" %>
+  </p>
+
+  <%= render "users/form", user: @user %>
+  </div>
+</div>

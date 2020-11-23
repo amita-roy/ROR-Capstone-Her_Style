@@ -12,7 +12,9 @@ module CategoriesHelper
     article ? rails_blob_url(article.image) : ''
   end
 
-  def most_voted_article_image(article)
+  def article_image(article)
+    return unless article
+
     rails_blob_url(article.image)
   end
 end

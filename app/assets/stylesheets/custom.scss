@@ -4,18 +4,103 @@
   min-height: calc(100vh - 135px);
 }
 
-.vote-icons {
-  width: 32px;
-}
-
-svg.vote-icons {
-  height: 32px;
-}
-
 .main-top {
   max-height: 570px;
 }
 
 .main-categories {
   max-height: 300px;
+}
+
+.static-background {
+  min-height: calc(100vh - 135px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-image:
+    linear-gradient(
+      to bottom right,
+      rgba(0, 0, 0, 0.18),
+      rgba(0, 0, 0, 0.5)
+    ),
+    url(https://images.unsplash.com/photo-1488190211105-8b0e65b80b4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80);
+}
+
+.form-container {
+  padding: 30px;
+  background-color: rgba(256, 256, 256, 0.5);
+  width: 600px;
+  text-align: center;
+  border-radius: 6px;
+  font-family: $carto-gothic-font;
+
+  h1 {
+    color: $primary-color;
+  }
+
+  form {
+    text-align: left;
+  }
+
+  label {
+    font-size: 20px;
+    color: $primary-color;
+  }
+}
+
+.create,
+.update,
+.secondary-btn {
+  padding: 8px 15px;
+  border: none;
+  color: $white-text;
+  border-radius: 6px;
+  font-size: 18px;
+}
+
+.create {
+  background-color: $primary-color;
+  color: $secondary-light;
+}
+
+.update,
+.secondary-btn {
+  background-color: $secondary-light;
+}
+
+.account {
+  color: $primary-color;
+  font-weight: bold;
+  font-size: 18px;
+
+  a {
+    color: $secondary-light;
+    text-decoration: none;
+    font-size: 20px;
+  }
+
+  a:hover {
+    color: $primary-color;
+  }
+}
+
+.flash-messages {
+  position: fixed;
+  top: 80px;
+  left: 0;
+  color: $light-text-color;
+  font-size: 20px;
+}
+
+.checkboxes {
+  input {
+    margin-left: 15px;
+  }
+}
+
+input[id^='article_category_ids'] {
+  margin-right: 5px;
 }

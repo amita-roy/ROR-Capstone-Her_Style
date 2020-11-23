@@ -1,22 +1,28 @@
 <%= form_with(model: user, local: true) do |f| %>
 
-<%= render "shared/errors", object: user %>    
+    <%= render "shared/errors", object: user %>
 
 
-<%= f.label :name %>
-<%= f.text_field :name %><br>
+<div class="form-group">
+    <%= f.label :name %>
+    <%= f.text_field :name, class: "form-control" %>
+</div>
 
-<%= f.label :email %>
-<%= f.email_field :email %><br>
+<div class="form-group mt-3">
+    <%= f.label :email %>
+    <%= f.email_field :email, class: "form-control" %>
+</div>
 
-<%= f.label :password %>
-<%= f.password_field :password %><br>
+<div class="form-group mt-3">
+    <%= f.label :password %>
+    <%= f.password_field :password, class: "form-control" %>
+</div>
 
 
 <% if user.new_record? %>
-    <%= f.submit "Create Account" %>
+    <%= f.submit "Create Account", class: "create mt-3" %>
 <% else %>
-    <%= f.submit "Update Account" %>
+    <%= f.submit "Update Account", class: "update mt-3" %>
 <% end %>
 
 <% end %>

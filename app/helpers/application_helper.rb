@@ -27,9 +27,9 @@ module ApplicationHelper
   end
 
   def vote?(user, article)
-    new_vote = link_to(my_icon('unfilled-vote', class: 'vote-icons'),
+    new_vote = link_to(my_icon('vote', class: 'vote-icons'),
                        article_vote_path(article), method: :post, remote: true)
-    delete = link_to(my_icon('filled-vote', class: 'vote-icons'),
+    delete = link_to(my_icon('voted', class: 'vote-icons'),
                      article_vote_path(article), method: :delete, remote: true)
     output = user&.votes?(article) ? delete : new_vote
     output.html_safe

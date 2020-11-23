@@ -1,0 +1,19 @@
+<div class="article-card">
+    <div class="image-container w-50" style="background-image: linear-gradient(0deg, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.2) 15%, rgba(0,0,0,0.2) 85%, rgba(0,0,0,0.5) 100%), url(<%= article_image(article) %>)">
+    
+    </div>
+    <div class="text-container w-50">
+        <div class="container-top">
+        <h4 class="mb-3"><span class="category-name"><%= (category).capitalize %></span></h4>
+            <h5><%= article.title %></h5>
+            <p><%= truncate(article.text, length: 100) %></p>
+        </div>
+        <section class="container-bottom">
+            <p class="mb-0 author-name">Author: <%= article.author.name %></p>
+            <div id="votes">
+                <%= vote?(current_user, article) %> <span class='vote-count ml-3'><%= pluralize(article.votes.length, "Vote") %></span>
+            </div>
+        </section>
+    </div>
+
+</div>
