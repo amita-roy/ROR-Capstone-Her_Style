@@ -13,8 +13,8 @@ module CategoriesHelper
   end
 
   def article_image(article)
-    if article
-      rails_blob_url(article.image)
-    end
+    return unless article
+
+    rails_blob_url(article.image)
   end
 end
