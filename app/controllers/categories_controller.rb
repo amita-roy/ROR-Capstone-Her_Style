@@ -1,6 +1,9 @@
 class CategoriesController < ApplicationController
+  before_action :require_signin, except: %i[index show]
+
   def index
-    @categories = Category.all
+    @categories = Category.category_order
+    @most_voted_article = Article.most_voted_article
   end
 
   def new
@@ -18,6 +21,7 @@ class CategoriesController < ApplicationController
 
   def show
     @category = Category.find_by!(slug: params[:id])
+    @articles = @category.articles_order
   end
 
   private

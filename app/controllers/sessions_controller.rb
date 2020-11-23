@@ -5,7 +5,7 @@ class SessionsController < ApplicationController
     user = User.find_by(name: params[:name])
     if user && user.name == params[:name]
       session[:user_id] = user.id
-      redirect_to user, flash: { notice: "Welcome back, #{user.name}!" }
+      redirect_to root_path, flash: { notice: "Welcome back, #{user.name}!" }
     else
       flash.now[:alert] = 'No user found, Please enter valid name'
       render :new

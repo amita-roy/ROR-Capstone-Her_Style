@@ -1,0 +1,31 @@
+@import 'shared';
+
+.footer {
+  background-color: $primary-color;
+
+  .navbar-brand {
+    color: $light-text-color;
+  }
+
+  ul {
+    list-style: none;
+  }
+
+  li a {
+    font-family: $lato-font;
+    font-size: 16px;
+    text-decoration: none;
+    color: $secondary-color;
+    transition: all 0.5s ease-in-out;
+    margin: 0 5px;
+  }
+
+  .copyright-text,
+  .contact-text {
+    color: $light-text-color;
+  }
+
+  .social-icons {
+    width: 34px;
+  }
+}

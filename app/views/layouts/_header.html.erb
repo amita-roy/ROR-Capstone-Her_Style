@@ -1,36 +1,43 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light px-2">
-    
-    <div class="d-flex justify-content-between align-items-center w-100 flex-lg-row" >
+<nav class="d-flex justify-content-between px-3 align-items-center py-3 header">
+    <div class="logo flex-1 w-25">
         <%= link_to "herSTYLE", root_path, class: "navbar-brand" %>
-    
-        <div class="flex-2 d-flex justify-content-center">
-            <ul class="navbar-nav">
-                <li class="nav-item active px-lg-3 mx-lg-3">
-                    <%= link_to 'Home', root_path, class: "nav-link" %>
-                </li>
-                <% all_routes.each do |route|%>
-                <li class="nav-item active px-lg-3 mx-lg-3">
-                    <%= route %>
-                </li>
-                <%end%>
-                
-            </ul>
-        </div>
-
-        <div class="d-flex justify-content-end flex-0">
-            <ul class="navbar-nav">
+    </div>
+    <div class="category-links flex-2 w-50">
+        <ul class="w-100 d-flex align-items-center justify-content-center mb-0">
+            <li class="py-1">
+                <%= nav_link_to "Home", root_path %>
+            </li>
+            <% all_routes.each do |route| %>
+            <li class="pl-3 py-1">
+                <%= route %>
+            </li>
+            <% end %>
+                          
+        </ul>
+    </div>
+    <div class="nav-right-links flex-1 w-25">
+        <ul class="d-flex align-items-center mb-0 justify-content-end">
             <% if current_user %>
-                <li><%= link_to current_user.name, current_user, class: "nav-link" %></li>
-                <li><%= link_to "Sign Out", session_path, method: :delete, class: "nav-link" %></li>
+                <li class="py-1 dropdown">
+                     <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <%= current_user.name %>
+                    </a>
+
+                    
+                    <div class="dropdown-menu dropdown-menu-lg-right">
+                        <%= link_to "Profile", current_user, class: "dropdown-item" %>
+                        <%= link_to "Write an Article", new_article_path, class: "dropdown-item" %>
+                        <%= link_to "Create New Category", new_category_path, class: "dropdown-item" %>
+                        <div class="dropdown-divider"></div>
+                        <%= link_to "Sign Out", session_path, method: :delete, class: "dropdown-item" %>
+                    </div>         
+                 </li>
+                
+                
             <% else %>
-                <li><%= link_to "Sign In", signin_path, class: "nav-link" %></li>
-                <li><%= link_to "Sign up", signup_path, class: "nav-link" %></li>
+                <li class="py-1"><%= nav_link_to "Sign In |", signin_path %></li>
+                <li class=" pl-1 py-1"><%= nav_link_to "Sign up", signup_path %></li>
             <% end %>
             </ul>
-        </div>
-       
-        
     </div>
-
-
 </nav>

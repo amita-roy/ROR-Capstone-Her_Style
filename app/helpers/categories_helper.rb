@@ -6,4 +6,13 @@ module CategoriesHelper
       article
     end
   end
+
+  def category_background(category)
+    article = category.most_recent_article
+    article ? rails_blob_url(article.image) : ''
+  end
+
+  def most_voted_article_image(article)
+    rails_blob_url(article.image)
+  end
 end

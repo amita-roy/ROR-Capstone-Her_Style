@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   root 'categories#index'
   resources :articles do
-    resources :votes
+    resource :vote, module: :articles
   end
   resources :categories
 

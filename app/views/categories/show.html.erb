@@ -1,8 +1,20 @@
 <h3><%= (@category.name).capitalize %></h3>
 
 <ul>
-<% cat_articles(@category).each do |article| %>
-    <li><%= article.title %></li>
+<% @articles.each do |article| %>
+    <li class="mb-4">
+        <h4><%= link_to article.title, article %></h4>
+        <p class="mt-2"><%= truncate(article.text, length: 10) %></p>
+        <small><%= link_to "Reed more...", article_path(article) %></small>
+
+        <div id="votes">
+        
+           <%= vote?(current_user, article) %> <span><%= article.votes.length %></span>
+        </div>
+        
+    </li>
+
+    
 <% end %>
 
 </ul>

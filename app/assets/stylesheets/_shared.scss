@@ -1,0 +1,35 @@
+$primary-color: #4e443e;
+$secondary-color: #fd6000;
+$secondary-light: #f99b00;
+$tertiary-color: #f6f618;
+$dark-gray: #767676;
+$light-gray: #b5b2af;
+$light-text-color: rgb(233, 222, 217);
+$white-text: white;
+$black-color: #181e24;
+$chivo-font: 'Chivo';
+$lato-font: 'Lato';
+$carto-gothic-font: 'Carto Gothic';
+
+@font-face {
+  font-family: 'Carto Gothic';
+  src: font-url('carto-gothic/CartoGothicStd-Book.otf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Lato';
+  src: font-url('lato/Lato-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Chivo';
+  src: font-url('chivo/Chivo-Regular.otf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@import 'bootstrap';

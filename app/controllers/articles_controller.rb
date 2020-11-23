@@ -1,5 +1,5 @@
 class ArticlesController < ApplicationController
-  before_action :require_signin, except: %i[index]
+  before_action :require_signin, except: %i[index show]
   before_action :set_article, only: %i[show edit update destroy]
 
   def index
@@ -11,8 +11,22 @@ class ArticlesController < ApplicationController
   end
 
   def show
-    @categories = @article.categories
-    @vote = current_user.votes.find_by(article_id: @article.id) if current_user
+    # @categories = @article.categories
+  end
+
+  def edit; end
+
+  def update
+    if @article.update(article_params)
+      redirect_to @article, notice: 'Article successfully updated!'
+    else
+      render :edit
+    end
+  end
+
+  def destroy
+    @article.destroy
+    redirect_to root_path
   end
 
   def create

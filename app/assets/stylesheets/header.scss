@@ -1,0 +1,51 @@
+@import '_shared';
+
+.header {
+  background-color: white;
+  border-bottom: 2px solid #dbdbdb;
+
+  .navbar-brand {
+    color: $secondary-color;
+  }
+
+  ul {
+    list-style: none;
+  }
+
+  li a {
+    font-family: $chivo-font, sans-serif;
+    text-transform: uppercase;
+    font-size: 16px;
+    text-decoration: none;
+    color: $dark-gray;
+    transition: all 0.5s ease-in-out;
+  }
+
+  li:focus,
+  li:hover {
+    a {
+      color: $secondary-color;
+    }
+  }
+
+  .active {
+    color: $secondary-color;
+  }
+
+  .dropdown-menu {
+    transition: transform 1s ease-in;
+    transform: translate3d(-139px, 50px, 0) !important;
+
+    .dropdown-item {
+      color: $dark-gray;
+      font-family: $lato-font, sans-serif;
+      font-size: 14px;
+      text-transform: none;
+    }
+  }
+
+  .dropdown-item:hover {
+    background-color: $secondary-color;
+    color: white;
+  }
+}

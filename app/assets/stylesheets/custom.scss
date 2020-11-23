@@ -1,9 +1,15 @@
+@import '_shared';
+
 .main {
-  min-height: calc(100vh - 130px);
+  min-height: calc(100vh - 135px);
 }
 
-.social-icons {
+.vote-icons {
   width: 32px;
+}
+
+svg.vote-icons {
+  height: 32px;
 }
 
 .main-top {
@@ -13,5 +19,3 @@
 .main-categories {
   max-height: 300px;
 }
-
-@import 'bootstrap';
