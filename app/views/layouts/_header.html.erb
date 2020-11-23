@@ -18,20 +18,17 @@
     <div class="nav-right-links flex-1 w-25">
         <ul class="d-flex align-items-center mb-0 justify-content-end">
             <% if current_user %>
-                <li class="py-1 dropdown">
-                     <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <%= current_user.name %>
-                    </a>
+                <li class="py-1 mr-2">
+                    <%= link_to current_user.name, current_user %> |
+                </li>
+                <li class="py-1">
+                     <%= link_to "Write an Article", new_article_path %><span><%= my_icon("pen-alt", class: "pen-icon mx-2") %></span> |
+                </li>
+                <li class="py-1 ml-2">
+                     <%= link_to "Sign Out", session_path, method: :delete %>
+                </li>
+                       
 
-                    
-                    <div class="dropdown-menu dropdown-menu-lg-right">
-                        <%= link_to "Profile", current_user, class: "dropdown-item" %>
-                        <%= link_to "Write an Article", new_article_path, class: "dropdown-item" %>
-                        <%= link_to "Create New Category", new_category_path, class: "dropdown-item" %>
-                        <div class="dropdown-divider"></div>
-                        <%= link_to "Sign Out", session_path, method: :delete, class: "dropdown-item" %>
-                    </div>         
-                 </li>
                 
                 
             <% else %>
