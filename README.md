@@ -18,7 +18,11 @@
 
 ## Live Demo
 
-[TBD](https://herokuapp.com/)
+[herSTYLE](https://murmuring-dawn-03579.herokuapp.com/)
+
+## Video Link
+
+[Loom Presentation](https://murmuring-dawn-03579.herokuapp.com/)
 
 ## Getting Started
 
@@ -38,6 +42,7 @@ Postgres: >=9.5
 - run rails `active_storage:install`
 - run `rails db:create`
 - Run `rails db:migrate` to setup your local database.<br>
+- Run `rails db:seed` to get seeded data for project.<br>
 - Finally run `rails console` to start the application.<br>
 
 ### Usage
