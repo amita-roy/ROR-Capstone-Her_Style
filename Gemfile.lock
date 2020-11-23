@@ -98,6 +98,8 @@ GEM
     factory_bot_rails (6.1.0)
       factory_bot (~> 6.1.0)
       railties (>= 5.0.0)
+    faker (2.14.0)
+      i18n (>= 1.6, < 2)
     ffi (1.13.1)
     ffi (1.13.1-java)
     globalid (0.4.2)
@@ -274,7 +276,9 @@ DEPENDENCIES
   byebug
   capybara
   database_cleaner (~> 1.8, >= 1.8.5)
+  factory_bot (~> 6.1)
   factory_bot_rails (~> 6.1)
+  faker (~> 2.14)
   jbuilder (~> 2.7)
   listen (~> 3.2)
   pg (~> 1.1)

@@ -35,6 +35,8 @@ group :development, :test do
   gem 'capybara'
   gem 'database_cleaner', '~> 1.8', '>= 1.8.5'
   gem 'factory_bot_rails', '~> 6.1'
+  gem 'factory_bot', '~> 6.1'
+  gem 'faker', '~> 2.14'
 end
 
 group :development do
