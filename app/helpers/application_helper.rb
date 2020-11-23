@@ -27,13 +27,11 @@ module ApplicationHelper
   end
 
   def vote?(user, article)
-    output = ''
-
-    if user&.votes?(article)
-      output << link_to(my_icon('filled-vote', class: 'vote-icons'), article_vote_path(article), method: :delete, remote: true)
-    else
-      output << link_to(my_icon('unfilled-vote', class: 'vote-icons'), article_vote_path(article), method: :post, remote: true)
-    end
+    new_vote = link_to(my_icon('unfilled-vote', class: 'vote-icons'),
+                       article_vote_path(article), method: :post, remote: true)
+    delete = link_to(my_icon('filled-vote', class: 'vote-icons'),
+                     article_vote_path(article), method: :delete, remote: true)
+    output = user&.votes?(article) ? delete : new_vote
     output.html_safe
   end
 end

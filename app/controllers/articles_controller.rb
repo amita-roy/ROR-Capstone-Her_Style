@@ -14,8 +14,7 @@ class ArticlesController < ApplicationController
     # @categories = @article.categories
   end
 
-  def edit
-  end
+  def edit; end
 
   def update
     if @article.update(article_params)
