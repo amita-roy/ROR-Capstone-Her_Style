@@ -1,7 +1,11 @@
-<h1>Sign Up</h1>
+<div class="login-register-page">
+  <div class="form-container">
+  <h1>Sign Up</h1>
 
-<p>
-  Already have an account? <%= link_to "Sign in!", signin_path %>
-</p>
+  <p class="already-account">
+    Already have an account? <%= link_to "Sign in!", signin_path, class: "ml-2" %>
+  </p>
 
-<%= render "users/form", user: @user %>
+  <%= render "users/form", user: @user %>
+  </div>
+</div>
