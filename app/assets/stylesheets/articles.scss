@@ -1,3 +1,50 @@
 // Place all the styles related to the articles controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+@import '_shared';
+
+.article-card {
+  display: flex;
+  min-height: 300px;
+  width: 50%;
+
+  .image-container {
+    width: 70%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  .text-container {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #f8f8f8;
+    color: $primary-color;
+
+    .category-name {
+      color: $secondary-light;
+      text-decoration: none;
+      border-bottom: 2px solid $secondary-light;
+    }
+
+    .container-bottom {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .author-name,
+      .vote-count {
+        font-size: 18px;
+        font-weight: bold;
+        color: $primary-color;
+      }
+    }
+  }
+}
+
+.vote-icons {
+  width: 25px;
+  height: 25px;
+}

@@ -1,6 +1,6 @@
 <div class="home">
     
-    <div class="top-article" style="background-image: linear-gradient(0deg, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.4) 15%, rgba(0,0,0,0.2) 85%, rgba(0,0,0,0.5) 100%), url(<%= most_voted_article_image(@most_voted_article) %>)">
+    <div class="top-article" style="background-image: linear-gradient(0deg, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.4) 15%, rgba(0,0,0,0.2) 85%, rgba(0,0,0,0.5) 100%), url(<%= article_image(@most_voted_article) %>)">
         <% if @most_voted_article %>
             <h5 class="title"><%= @most_voted_article.title %></h5>
             <p class="description"><%= @most_voted_article.text %></p>

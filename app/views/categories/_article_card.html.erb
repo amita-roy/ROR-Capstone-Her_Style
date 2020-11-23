@@ -1,0 +1,19 @@
+<div class="article-card">
+    <div class="image-container" style="background-image: url(<%= article_image(article) %>)">
+    
+    </div>
+    <div class="text-container flex-1">
+        <div class="container-top">
+        <h4 class="mb-3"><span class="category-name"><%= (category).capitalize %></span></h4>
+            <h5><%= article.title %></h5>
+            <p><%= truncate(article.text, length: 100) %></p>
+        </div>
+        <section class="container-bottom">
+            <p class="mb-0 author-name">Author: <%= article.author.name %></p>
+            <div id="votes">
+                <%= vote?(current_user, article) %> <span class='vote-count ml-3'><%= pluralize(article.votes.length, "Vote") %></span>
+            </div>
+        </section>
+    </div>
+
+</div>
