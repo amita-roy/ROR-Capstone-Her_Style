@@ -1,6 +1,17 @@
 <div class="category-article-list">
-    <% @articles.each do |article| %>
-        <%= render "article_card", article: article, category: @category.name %>
+    <% if false %>
+        <% @articles.each do |article| %>
+            <%= render "article_card", article: article, category: @category.name %>
+        <% end %>
     <% end %>
+
+    <% @row_count.times do |count| %>
+    
+        <div class="article-row <%= count.even? ? "even" : "odd" %>">
+            <%= render "article_card", article: @articles[2 * count], category: @category.name %>
+            <%= render "article_card", article: @articles[2 * count + 1], category: @category.name %>
+        </div>
+    <% end %>
+
 </div>
 

@@ -3,6 +3,10 @@
 // You can use Sass (SCSS) here: https://sass-lang.com/
 @import '_shared';
 
+.article-row {
+  display: flex;
+}
+
 .article-card {
   display: flex;
   min-height: 300px;
@@ -40,6 +44,12 @@
         color: $primary-color;
       }
     }
+  }
+}
+
+.odd {
+  .article-card {
+    flex-direction: row-reverse;
   }
 }
 
