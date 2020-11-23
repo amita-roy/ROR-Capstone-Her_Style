@@ -22,7 +22,7 @@ class CategoriesController < ApplicationController
   def show
     @category = Category.find_by!(slug: params[:id])
     @articles = @category.articles_order
-    @row_count = (@articles.length / 2).ceil
+    @row_count = (@articles.length / 2.0).ceil
   end
 
   private

@@ -4,12 +4,14 @@
             <%= render "article_card", article: article, category: @category.name %>
         <% end %>
     <% end %>
-
+       <% console %>
     <% @row_count.times do |count| %>
-    
+     
         <div class="article-row <%= count.even? ? "even" : "odd" %>">
             <%= render "article_card", article: @articles[2 * count], category: @category.name %>
-            <%= render "article_card", article: @articles[2 * count + 1], category: @category.name %>
+            <% if @articles[2 * count + 1] %>
+                <%= render "article_card", article: @articles[2 * count + 1], category: @category.name %>
+            <% end %>
         </div>
     <% end %>
 
