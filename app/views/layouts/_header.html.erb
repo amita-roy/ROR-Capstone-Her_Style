@@ -1,8 +1,8 @@
 <nav class="d-flex justify-content-between px-3 align-items-center py-3 header">
-    <div class="logo flex-1 w-25">
+    <div class="logo">
         <%= link_to "herSTYLE", root_path, class: "navbar-brand" %>
     </div>
-    <div class="category-links flex-2 w-50">
+    <div class="category-links">
         <ul class="w-100 d-flex align-items-center justify-content-center mb-0">
             <li class="py-1">
                 <%= nav_link_to "Home", root_path %>
@@ -15,16 +15,16 @@
                           
         </ul>
     </div>
-    <div class="nav-right-links flex-1 w-25">
+    <div class="nav-right-links">
         <ul class="d-flex align-items-center mb-0 justify-content-end">
             <% if current_user %>
                 <li class="py-1 mr-2">
-                    <%= link_to current_user.name, current_user %> |
+                    <%= link_to current_user.name, current_user %>
+                </li>
+                <li class="py-1 mx-3">
+                     <%= link_to "Write an Article", new_article_path %>
                 </li>
                 <li class="py-1">
-                     <%= link_to "Write an Article", new_article_path %><span><%= my_icon("pen-alt", class: "pen-icon mx-2") %></span> |
-                </li>
-                <li class="py-1 ml-2">
                      <%= link_to "Sign Out", session_path, method: :delete %>
                 </li>
                        
