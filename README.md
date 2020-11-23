@@ -22,7 +22,7 @@
 
 ## Video Link
 
-[Loom Presentation](https://murmuring-dawn-03579.herokuapp.com/)
+[Loom Presentation](https://www.loom.com/share/75e2cc6505f64f99b6950760c56c1819)
 
 ## Getting Started
 
