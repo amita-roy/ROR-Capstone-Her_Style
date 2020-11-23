@@ -14,7 +14,10 @@
 
   <body>
     <%= render "layouts/header" %>
-    <%= render "layouts/flash" %>
+    <div class="flash-messages ml-3">
+      <%= render "layouts/flash" %>
+    </div>
+   
     <main class="main">
        
       <%= yield %>

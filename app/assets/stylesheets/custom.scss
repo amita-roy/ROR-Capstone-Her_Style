@@ -51,24 +51,26 @@
 }
 
 .create-acc,
-.update-acc {
+.update-acc,
+.secondary-btn {
   padding: 8px 15px;
   border: none;
   color: $white-text;
   border-radius: 6px;
+  font-size: 18px;
 }
 
 .create-acc {
   background-color: $primary-color;
   color: $secondary-light;
-  font-size: 18px;
 }
 
-.update-acc {
+.update-acc,
+.secondary-btn {
   background-color: $secondary-light;
 }
 
-.already-account {
+.account {
   color: $primary-color;
   font-weight: bold;
   font-size: 18px;
@@ -82,4 +84,12 @@
   a:hover {
     color: $primary-color;
   }
+}
+
+.flash-messages {
+  position: fixed;
+  top: 80px;
+  left: 0;
+  color: $light-text-color;
+  font-size: 20px;
 }
