@@ -1,4 +1,6 @@
-<% @articles.each do |article| %>
-    <%= render "article_card", article: article, category: @category.name %>
-<% end %>
+<div class="category-article-list">
+    <% @articles.each do |article| %>
+        <%= render "article_card", article: article, category: @category.name %>
+    <% end %>
+</div>
 
