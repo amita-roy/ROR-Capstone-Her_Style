@@ -12,7 +12,7 @@
   max-height: 300px;
 }
 
-.login-register-page {
+.static-background {
   min-height: calc(100vh - 135px);
   display: flex;
   justify-content: center;
@@ -50,8 +50,8 @@
   }
 }
 
-.create-acc,
-.update-acc,
+.create,
+.update,
 .secondary-btn {
   padding: 8px 15px;
   border: none;
@@ -60,12 +60,12 @@
   font-size: 18px;
 }
 
-.create-acc {
+.create {
   background-color: $primary-color;
   color: $secondary-light;
 }
 
-.update-acc,
+.update,
 .secondary-btn {
   background-color: $secondary-light;
 }
@@ -92,4 +92,14 @@
   left: 0;
   color: $light-text-color;
   font-size: 20px;
+}
+
+.checkboxes {
+  input {
+    margin-left: 15px;
+  }
+}
+
+input[id^='article_category_ids'] {
+  margin-right: 5px;
 }

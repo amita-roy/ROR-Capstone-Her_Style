@@ -2,26 +2,32 @@
 
     <%= render "shared/errors", object: article %>    
 
-
-    <%= f.label :title %>
-    <%= f.text_field :title %><br>
-
-    <%= f.label :text %>
-    <%= f.text_area :text %><br>
-
-    <%= f.label :created_at %>
-    <%= f.date_field :createdat %><br>
-
-    <%= f.label :image %>
-    <%= f.file_field :image %><br>
-
-    <%= f.label :categories %>
-    <%= f.collection_check_boxes(:category_ids, Category.all, :id, :name) %><br>
+    <div class="form-group mt-3">
+        <%= f.label :title %>   
+        <%= f.text_field :title, class: "form-control" %>
+    </div>
+    <div class="form-group mt-3">
+        <%= f.label :text %>
+        <%= f.text_area :text, class: "form-control" %>
+    </div>
+    <div class="form-group mt-3">
+        <%= f.label :created_at %>
+        <%= f.date_field :createdat, class: "form-control" %>
+    </div>
+    <div class="form-group mt-3">
+        <%= f.label :image %>
+        <%= f.file_field :image, class: "form-control" %>
+    </div>
+    <div class="form-group checkboxes mt-3">
+        <%= f.label :categories, class: "form-check-label" %>
+        <%= f.collection_check_boxes(:category_ids, Category.all, :id, :name, class: "form-check-input mr-2") %>
+    </div>
+      
 
     <% if article.new_record? %>
-        <%= f.submit "Create Article" %>
+        <%= f.submit "Create Article", class: "create mt-3" %>
     <% else %>
-        <%= f.submit "Update Article" %>
+        <%= f.submit "Update Article", class: "secondary-btn mt-3" %>
     <% end %>
     
     
