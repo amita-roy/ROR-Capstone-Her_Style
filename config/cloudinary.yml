@@ -3,17 +3,17 @@ development:
   cloud_name: dalroqfi9
   api_key: '334788359165227'
   api_secret: vsj3-_lqjTuerppSB-Iijr_WCaI
-  enhance_image_tag: true
-  static_file_support: false
+  secure: true
+  cdn_subdomain: true
 production:
   cloud_name: dalroqfi9
   api_key: '334788359165227'
   api_secret: vsj3-_lqjTuerppSB-Iijr_WCaI
-  enhance_image_tag: true
-  static_file_support: true
+  secure: true
+  cdn_subdomain: true
 test:
   cloud_name: dalroqfi9
   api_key: '334788359165227'
   api_secret: vsj3-_lqjTuerppSB-Iijr_WCaI
-  enhance_image_tag: true
-  static_file_support: false
+  secure: true
+  cdn_subdomain: true
