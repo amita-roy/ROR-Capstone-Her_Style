@@ -14,7 +14,7 @@ class ArticlesController < ApplicationController
 
   def update
     if @article.update(article_params)
-      redirect_to @article, notice: 'Article successfully updated!'
+      redirect_to root_path, notice: 'Article successfully updated!'
     else
       render :edit
     end
