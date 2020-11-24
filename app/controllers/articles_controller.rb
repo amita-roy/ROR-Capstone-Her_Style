@@ -10,9 +10,6 @@ class ArticlesController < ApplicationController
     @article = current_user.articles.new
   end
 
-  def show
-    # @categories = @article.categories
-  end
 
   def edit; end
 
