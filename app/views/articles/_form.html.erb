@@ -13,7 +13,7 @@
     
     <div class="form-group mt-3">
         <%= f.label :image %>
-        <%= f.file_field :image, class: "form-control" %>
+        <%= f.file_field :image, class: "form-control", direct_upload: true %>
     </div>
     <div class="form-group checkboxes mt-3">
         <%= f.label :categories, class: "form-check-label" %>
