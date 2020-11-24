@@ -17,4 +17,12 @@ module CategoriesHelper
 
     rails_blob_url(article.image)
   end
+
+  def category_article1(articles, count)
+    articles[2 * count]
+  end
+
+  def category_article2(articles, count)
+    articles[2 * count + 1]
+  end
 end

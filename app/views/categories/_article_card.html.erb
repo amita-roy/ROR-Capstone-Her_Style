@@ -11,7 +11,7 @@
         <section class="container-bottom">
             <p class="mb-0 author-name">Author: <%= article.author.name %></p>
             <div id="votes">
-                <%= vote?(current_user, article) %> <span class='vote-count ml-3'><%= pluralize(article.votes.length, "Vote") %></span>
+                <%= vote?(current_user, article) %> <span class='vote-count ml-2'><%= pluralize(article.votes.length, "Vote") %></span>
             </div>
         </section>
     </div>
