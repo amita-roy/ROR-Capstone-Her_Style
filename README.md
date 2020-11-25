@@ -2,10 +2,9 @@
 
 > This project is for Ruby on Rails capstone, which is based on lifestyle articles website. I have follow the given design of the website, but I have chossen the article website for women lifestyle. I am planning to work on it in future to add more features and I'll add a personal logo as well forthis web site.
 
-![Homepage](./app/assets/images/ss1.png)
-![category page](./app/assets/images/ss2.png)
-![SIgn Up](./app/assets/images/ss3.png)
-![New Article](./app/assets/images/ss4.png)
+![Homepage](./app/assets/images/IMac.jpg)
+![tablet](./app/assets/images/tab.jpg)
+![laptop](./app/assets/images/laptop.jpg)
 
 ## Built With
 
@@ -23,6 +22,7 @@
 ## Video Link
 
 [Loom Presentation](https://www.loom.com/share/75e2cc6505f64f99b6950760c56c1819)
+[Loom Updated presentation](https://www.loom.com/share/8ebec7310bf6460b983902c0d2c531d3)
 
 ## Getting Started
 
@@ -88,22 +88,29 @@ Give a ⭐️ if you like this project!
 ## Acknowledgments
 
 > [https://www.behance.net/gallery/14554909/liFEsTlye-Mobile-version](https://www.behance.net/gallery/14554909/liFEsTlye-Mobile-version)
+
 > Design idea by [Nelson Sakwa on Behance](https://www.behance.net/sakwadesignstudio)
 
-> The design utilizes three free fonts. Use the links provided to download them :
-> Lato font - http://www.fontsquirrel.com/fonts/lato
-> Cartogothic standard - http://www.fontex.org/download/Carto-gothic-std.otf
-> Chivo - http://www.fontsquirrel.com/fonts/chivo
-> Social media icons by Picons.me - http://picons.me/
+- The design utilizes three free fonts. Use the links provided to download them :
+
+  - [Lato font](http://www.fontsquirrel.com/fonts/lato)
+
+  - [Cartogothic standard](http://www.fontex.org/download/Carto-gothic-std.otf)
+
+  - [Chivo](http://www.fontsquirrel.com/fonts/chivo)
+
+- [Social media icons by Picons.me](http://picons.me/)
 
 - Stock images from unsplash
 
-  - <span>Photo by <a href="https://unsplash.com/@linkedinsalesnavigator?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">LinkedIn Sales Navigator</a> on <a href="https://unsplash.com/s/photos/women-business?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span>
+  - [Photo by Unsplash](https://unsplash.com/photos/NpyF7rjqmq4)
 
-  - <span>Photo by <a href="https://unsplash.com/@linkedinsalesnavigator?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">LinkedIn Sales Navigator</a> on <a href="https://unsplash.com/s/photos/women-business?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span>
+  - [Photo by Unsplash](https://unsplash.com/photos/L85a1k-XqH8)
 
-  - <span>Photo by <a href="https://unsplash.com/@wocintechchat?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Christina @ wocintechchat.com</a> on <a href="https://unsplash.com/s/photos/women-business?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span>
+  - [Photo by Unsplash](https://unsplash.com/photos/QgYvORVDdd8)
+
+  - [Photo by Unsplash](https://unsplash.com/photos/vLwH8bWoi_8)
+
+  - [Photo by Unsplash](https://unsplash.com/photos/505eectW54k)
 
 ## 📝 License
-
-TBA

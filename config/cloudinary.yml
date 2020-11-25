@@ -1,0 +1,19 @@
+---
+development:
+  cloud_name: dalroqfi9
+  api_key: '334788359165227'
+  api_secret: vsj3-_lqjTuerppSB-Iijr_WCaI
+  secure: true
+  cdn_subdomain: true
+production:
+  cloud_name: dalroqfi9
+  api_key: '334788359165227'
+  api_secret: vsj3-_lqjTuerppSB-Iijr_WCaI
+  secure: true
+  cdn_subdomain: true
+test:
+  cloud_name: dalroqfi9
+  api_key: '334788359165227'
+  api_secret: vsj3-_lqjTuerppSB-Iijr_WCaI
+  secure: true
+  cdn_subdomain: true

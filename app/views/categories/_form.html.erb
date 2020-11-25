@@ -1,12 +1,14 @@
 <%= form_with(model: category, local: true) do |form| %>
 
     <%= render "shared/errors", object: category %>
-
-    <%= form.label :name %>
-    <%= form.text_field :name, autofocus: true %>
-
-    <%= form.label :priority %>    
-    <%= form.select(:priority, [["High", 1], ["Medium", 2], ["Low", 3]]) %>
-
-    <%= form.submit %>
+    <div class="form-group"> 
+        <%= form.label :name %>
+        <%= form.text_field :name, autofocus: true, class: "form-control" %>
+    </div>
+    <div class="form-group my-3">
+        <%= form.label :priority, class: 'mr-3' %>    
+        <%= form.select(:priority, [["High", 1], ["Medium", 2], ["Low", 3]], class: "form-control" )%>
+    </div>
+    
+    <%= form.submit "Submit", class: 'create' %>
 <% end %>

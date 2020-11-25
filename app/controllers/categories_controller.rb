@@ -3,6 +3,7 @@ class CategoriesController < ApplicationController
 
   def index
     @categories = Category.category_order
+    @categories_in_box = @categories.slice(0, 4)
     @most_voted_article = Article.most_voted_article
   end
 

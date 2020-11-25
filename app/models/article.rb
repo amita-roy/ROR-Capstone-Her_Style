@@ -6,8 +6,8 @@ class Article < ApplicationRecord
 
   has_one_attached :image
 
-  validates :title, :text, :createdat, :image, :categories, presence: true
-  validates :title, length: { minimum: 5, maximum: 200 }, uniqueness: true
+  validates :title, :text, :image, :categories, presence: true
+  validates :title, length: { minimum: 5, maximum: 80 }, uniqueness: true
 
   def self.most_voted_article
     articles = Article.includes(:votes).sort { |a, b| b.votes.size <=> a.votes.size }

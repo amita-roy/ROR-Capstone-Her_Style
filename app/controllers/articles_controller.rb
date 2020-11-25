@@ -10,12 +10,11 @@ class ArticlesController < ApplicationController
     @article = current_user.articles.new
   end
 
-
   def edit; end
 
   def update
     if @article.update(article_params)
-      redirect_to @article, notice: 'Article successfully updated!'
+      redirect_to root_path, notice: 'Article successfully updated!'
     else
       render :edit
     end
@@ -42,6 +41,6 @@ class ArticlesController < ApplicationController
   end
 
   def article_params
-    params.require(:article).permit(:title, :text, :createdat, :image, category_ids: [])
+    params.require(:article).permit(:title, :text, :image, category_ids: [])
   end
 end
