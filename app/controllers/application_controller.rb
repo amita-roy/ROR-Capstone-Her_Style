@@ -9,7 +9,7 @@ class ApplicationController < ActionController::Base
     return if current_user
 
     session[:intended_url] = request.url
-    redirect_to signin_path, alert: 'Please sigin first !'
+    redirect_to signin_path, alert: 'Please signin first !'
   end
 
   def current_user?(user)
