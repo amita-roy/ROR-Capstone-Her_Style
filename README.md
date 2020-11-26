@@ -1,6 +1,6 @@
 # herSTYLE ROR Capstone project
 
-> This project is for Ruby on Rails capstone, which is based on lifestyle articles website. I have follow the given design of the website, but I have chossen the article website for women lifestyle. I am planning to work on it in future to add more features and I'll add a personal logo as well forthis web site.
+> This project is for Ruby on Rails capstone, which is based on lifestyle articles website. I have followed the given design of the website, but I have chossen the article website for women lifestyle. I am planning to work on it in future to add more features and I'll add a personal logo as well for this web site.
 
 ![Homepage](./app/assets/images/IMac.jpg)
 ![tablet](./app/assets/images/tab.jpg)
